@@ -1,195 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raju Bhimani - GitHub Profile</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 3rem;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 1rem;
-        }
-        section {
-            margin-bottom: 2rem;
-        }
-        h2 {
+            background-color: #f7f7f7;
             color: #333;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
+
+        header {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
         }
-        li {
-            margin: 0.5rem 0;
+
+        header h1 {
+            margin: 0;
+            font-size: 3.5rem;
         }
-        a {
-            color: #0066cc;
-            text-decoration: none;
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
         }
-        .skills, .projects {
+
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 1.5rem;
+        }
+
+        .section-heading {
+            font-size: 2.5rem;
+            color: #343a40;
+            border-bottom: 2px solid #343a40;
+            padding-bottom: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .about, .contact, .skills, .projects, .education {
+            margin-bottom: 3rem;
+        }
+
+        .skills,
+        .projects {
             display: flex;
             flex-wrap: wrap;
-            gap: 1.5rem;
+            gap: 2rem;
         }
+
         .skill, .project {
-            flex: 1 1 200px;
-            background: white;
-            border-radius: 5px;
-            padding: 1rem;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            flex: 1 1 220px;
+            transition: transform 0.3s ease;
         }
-        .contact {
-            text-align: center;
+
+        .skill:hover, .project:hover {
+            transform: translateY(-10px);
         }
-        footer {
-            background-color: #333;
+
+        .skill h3, .project h3 {
+            font-size: 1.6rem;
+            color: #343a40;
+        }
+
+        .skill ul, .project p {
+            margin-top: 1rem;
+        }
+
+        .contact a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: #343a40;
             color: white;
             text-align: center;
             padding: 1rem;
             margin-top: 3rem;
         }
+
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .profile-img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-top: -75px;
+            border: 5px solid white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #0056b3;
+        }
     </style>
 </head>
+
 <body>
 
+    <!-- Header Section -->
     <header>
-        <h1>Hello, I'm Raju Bhimani! 👋</h1>
-        <p>Welcome to my GitHub profile page! I'm a Senior Python Developer with expertise in backend development and data engineering.</p>
+        <!--img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img"-->
+        <h1>Raju Bhimani</h1>
+        <p>Senior Python Developer | Data Engineer | Data Science Enthusiast</p>
     </header>
 
     <div class="container">
         <!-- About Me Section -->
-        <section>
-            <h2>About Me</h2>
-            <p>I specialize in backend development, data processing, and building scalable systems. I have a strong foundation in Python and cloud technologies like AWS, and I am passionate about data engineering and machine learning.</p>
+        <section class="about">
+            <h2 class="section-heading">About Me</h2>
+            <p>Hello! I'm Raju Bhimani, a passionate Senior Python Developer with experience in backend development, cloud computing, data engineering, and a keen interest in data science. I specialize in creating efficient systems, working with Python and AWS technologies, and automating business processes. I'm always seeking innovative ways to optimize and streamline operations in scalable systems. Let's connect and collaborate!</p>
         </section>
 
-        <!-- Technical Skills Section -->
-        <section>
-            <h2>Technical Skills</h2>
-            <div class="skills">
-                <div class="skill">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>Python</li>
-                    </ul>
-                </div>
-                <div class="skill">
-                    <h3>Data Science & ML Libraries</h3>
-                    <ul>
-                        <li>NumPy, Pandas, Matplotlib, scikit-learn, Seaborn, FastAPI, Flask, Jinja</li>
-                    </ul>
-                </div>
-                <div class="skill">
-                    <h3>Databases</h3>
-                    <ul>
-                        <li>SQL, PostgreSQL, Oracle 12c</li>
-                    </ul>
-                </div>
-                <div class="skill">
-                    <h3>Cloud Technologies</h3>
-                    <ul>
-                        <li>AWS S3, AWS Glue, AWS Athena, Kafka</li>
-                    </ul>
-                </div>
-                <div class="skill">
-                    <h3>Operating Systems</h3>
-                    <ul>
-                        <li>Windows, Linux (Red Hat, Ubuntu)</li>
-                    </ul>
-                </div>
+        <!-- Skills Section -->
+        <section class="skills">
+            <h2 class="section-heading">Technical Skills</h2>
+            <div class="skill">
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>Python</li>
+                </ul>
+            </div>
+            <div class="skill">
+                <h3>Data Science & ML Libraries</h3>
+                <ul>
+                    <li>NumPy, Pandas, Matplotlib, scikit-learn, Seaborn</li>
+                </ul>
+            </div>
+            <div class="skill">
+                <h3>Web Development</h3>
+                <ul>
+                    <li>FastAPI, Flask, Django</li>
+                </ul>
+            </div>
+            <div class="skill">
+                <h3>Cloud & Databases</h3>
+                <ul>
+                    <li>AWS S3, AWS Glue, AWS Athena</li>
+                    <li>SQL, PostgreSQL, Oracle 12c</li>
+                </ul>
+            </div>
+            <div class="skill">
+                <h3>Tools & Technologies</h3>
+                <ul>
+                    <li>Kafka, Airflow, Selenium, BeautifulSoup</li>
+                    <li>Linux (Ubuntu, RedHat), Docker</li>
+                </ul>
             </div>
         </section>
 
         <!-- Education Section -->
-        <section>
-            <h2>Education</h2>
+        <section class="education">
+            <h2 class="section-heading">Education</h2>
             <ul>
-                <li><strong>Post Graduate Certification in Data Science</strong> - IIIT, Bangalore (GTU), 2020</li>
-                <li><strong>Bachelor's in Computer Science and Engineering</strong> - HJD Institute of Technical Education and Research, Kera (GTU), 2016</li>
-                <li><strong>Diploma in Computer Engineering</strong> - Government Polytechnic, Bhuj (GTU), 2013</li>
-                <li><strong>SSC</strong> - The White Eagle School, Devpar (CBSE), 2009</li>
-            </ul>
-        </section>
-
-        <!-- Professional Experience Section -->
-        <section>
-            <h2>Professional Experience</h2>
-            <ul>
-                <li><strong>Senior Python Developer</strong> - Ocius Technologies, Ahmedabad (August 2020 – Present)</li>
-                <p>Developing backend systems, integrating AWS services, and working on data reconciliation and automation tools.</p>
-
-                <li><strong>Software Engineer</strong> - Space Application Centre, ISRO (October 2016 – October 2019)</li>
-                <p>Worked on web applications using Python and Django, focusing on trend analysis and satellite product inventory management.</p>
+                <li><strong>Post Graduate Certification in Data Science</strong> - IIIT, Bangalore (GTU), CGPA: 3.8/4, 2020</li>
+                <li><strong>Bachelor's in Computer Science and Engineering</strong> - HJD Institute of Technical Education and Research, Kera (GTU), CGPA: 7.63/10, 2016</li>
+                <li><strong>Diploma in Computer Engineering</strong> - Government Polytechnic, Bhuj (GTU), CGPA: 6.98/10, 2013</li>
+                <li><strong>SSC</strong> - The White Eagle School, Devpar (CBSE), 68.80%, 2009</li>
             </ul>
         </section>
 
         <!-- Projects Section -->
-        <section>
-            <h2>Key Projects</h2>
-            <div class="projects">
-                <div class="project">
-                    <h3>Scraper — Ocius Technologies</h3>
-                    <p>Data scraping application that converts data into CSV format, supporting JSON, Text-based PDF, XML, and HTML data.</p>
-                    <p><strong>Technologies</strong>: Python, BeautifulSoup, Selenium, Airflow, Linux (Ubuntu)</p>
-                </div>
-                <div class="project">
-                    <h3>Recon — Ocius Technologies</h3>
-                    <p>A reconciliation tool for handling different database configurations and user requirements.</p>
-                    <p><strong>Technologies</strong>: Python, AWS Athena, FastAPI, Airflow, Linux (Ubuntu)</p>
-                </div>
-                <div class="project">
-                    <h3>Dag Handler — Ocius Technologies</h3>
-                    <p>A tool that triggers DAGs based on events like file uploads, Kafka messages, and more, replacing time-based scheduling in Airflow.</p>
-                    <p><strong>Technologies</strong>: Python, Kafka, FastAPI, Airflow, Linux (Ubuntu)</p>
-                </div>
-                <div class="project">
-                    <h3>Trend Analyzer — ISRO</h3>
-                    <p>A web portal that analyzes trends in satellite data and detects outliers for further analysis.</p>
-                    <p><strong>Technologies</strong>: Python, Django, PostgreSQL, HTML, CSS, Bootstrap, JavaScript, Hibernate, Linux (RedHat)</p>
-                </div>
-                <div class="project">
-                    <h3>Product Inventory — ISRO</h3>
-                    <p>A product inventory system for locating satellite products and exporting their metadata.</p>
-                    <p><strong>Technologies</strong>: Java (Swing), PostgreSQL, Linux (RedHat)</p>
-                </div>
-                <div class="project">
-                    <h3>Monitoring Software for Satellite Data Processing Chain — ISRO</h3>
-                    <p>This application is a tool to monitor the daily automation system, which processes satellite data and stores it in a database on a daily basis. It allows operators to manage automation failures and upgrade legacy code.</p>
-                    <p><strong>Technologies</strong>: NetBeans, Java (Swing), Linux (RedHat)</p>
-                </div>
+        <section class="projects">
+            <h2 class="section-heading">Key Projects</h2>
+            <div class="project">
+                <h3>Scraper — Ocius Technologies</h3>
+                <p>Developed a data scraping application to convert data into CSV format, supporting JSON, PDF, XML, and HTML data formats.</p>
+                <p><strong>Technologies</strong>: Python, BeautifulSoup, Selenium, Airflow, Linux (Ubuntu)</p>
             </div>
+            <div class="project">
+                <h3>Recon — Ocius Technologies</h3>
+                <p>Built a reconciliation tool for handling various database configurations, enabling seamless operations and data integration.</p>
+                <p><strong>Technologies</strong>: Python, AWS Athena, FastAPI, Airflow, Linux (Ubuntu)</p>
+            </div>
+            <div class="project">
+                <h3>Dag Handler — Ocius Technologies</h3>
+                <p>A tool that triggers DAGs based on events like file uploads, Kafka messages, and more, replacing time-based scheduling in Airflow.</p>
+                <p><strong>Technologies</strong>: Python, Kafka, FastAPI, Airflow, Linux (Ubuntu)</p>
+            </div>
+            <div class="project">
+    <h3>Monitoring Software for Satellite Data Processing Chain — ISRO</h3>
+    <p>Developed a tool to monitor the daily automation system of satellite data processing, manage failures, and upgrade legacy systems. Integrated a product inventory system for locating satellite products and exporting their metadata. The system utilizes metadata to track and visualize data locations on a world map, enhancing operational efficiency.</p>
+    <p><strong>Technologies</strong>: NetBeans, Java (Swing), Linux (RedHat)</p>
+</div>
         </section>
 
         <!-- Contact Section -->
         <section class="contact">
-            <h2>Contact Me</h2>
+            <h2 class="section-heading">Contact Me</h2>
+            <p>Feel free to reach out via email or connect with me on LinkedIn!</p>
             <p>Email: <a href="mailto:raju.bhimani07@live.com">raju.bhimani07@live.com</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/raju-bhimani-2b0973b4" target="_blank">Raju Bhimani</a></p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/raju-bhimani-2b0973b4" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <!-- Add other social icons if needed -->
+            </div>
         </section>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 Raju Bhimani. All Rights Reserved.</p>
+        <p>Made with <span style="color: red;">&#10084;</span> for the web</p>
     </footer>
 
 </body>
+
 </html>
