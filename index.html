@@ -19,6 +19,7 @@
             color: white;
             text-align: center;
             padding: 3rem 1rem;
+            position: relative;
         }
 
         header h1 {
@@ -35,6 +36,9 @@
             max-width: 1200px;
             margin: 3rem auto;
             padding: 1.5rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .section-heading {
@@ -43,9 +47,10 @@
             border-bottom: 2px solid #343a40;
             padding-bottom: 10px;
             margin-bottom: 2rem;
+            text-align: center;
         }
 
-        .about, .contact, .skills, .projects, .education {
+        section {
             margin-bottom: 3rem;
         }
 
@@ -54,28 +59,36 @@
             display: flex;
             flex-wrap: wrap;
             gap: 2rem;
+            justify-content: center;
         }
 
-        .skill, .project {
+        .skill,
+        .project {
             background: #fff;
             border-radius: 8px;
             padding: 1.5rem;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            flex: 1 1 220px;
+            flex: 1 1 300px;
+            max-width: 300px;
             transition: transform 0.3s ease;
+            text-align: center;
         }
 
-        .skill:hover, .project:hover {
+        .skill:hover,
+        .project:hover {
             transform: translateY(-10px);
         }
 
-        .skill h3, .project h3 {
+        .skill h3,
+        .project h3 {
             font-size: 1.6rem;
             color: #343a40;
         }
 
-        .skill ul, .project p {
+        .skill ul,
+        .project p {
             margin-top: 1rem;
+            text-align: left;
         }
 
         .contact a {
@@ -109,9 +122,18 @@
             width: 150px;
             height: 150px;
             object-fit: cover;
-            margin-top: -75px;
+            margin: 0 auto;
             border: 5px solid white;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .social-icons {
+            text-align: center;
+            margin-top: 1rem;
         }
 
         .social-icons a {
@@ -124,6 +146,20 @@
         .social-icons a:hover {
             color: #0056b3;
         }
+
+        @media (max-width: 768px) {
+            .skills,
+            .projects {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+
+            .skill,
+            .project {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -131,100 +167,104 @@
 
     <!-- Header Section -->
     <header>
-        <!--img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img"-->
+        <!-- Uncomment and add profile image if available -->
+        <!-- <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img"> -->
         <h1>Raju Bhimani</h1>
         <p>Senior Python Developer | Data Engineer | Data Science Enthusiast</p>
     </header>
 
     <div class="container">
         <!-- About Me Section -->
-        <section class="about">
+        <section>
             <h2 class="section-heading">About Me</h2>
             <p>Hello! I'm Raju Bhimani, a passionate Senior Python Developer with experience in backend development, cloud computing, data engineering, and a keen interest in data science. I specialize in creating efficient systems, working with Python and AWS technologies, and automating business processes. I'm always seeking innovative ways to optimize and streamline operations in scalable systems. Let's connect and collaborate!</p>
         </section>
 
         <!-- Skills Section -->
-        <section class="skills">
+        <section>
             <h2 class="section-heading">Technical Skills</h2>
-            <div class="skill">
-                <h3>Programming Languages</h3>
-                <ul>
-                    <li>Python</li>
-                </ul>
-            </div>
-            <div class="skill">
-                <h3>Data Science & ML Libraries</h3>
-                <ul>
-                    <li>NumPy, Pandas, Matplotlib, scikit-learn, Seaborn</li>
-                </ul>
-            </div>
-            <div class="skill">
-                <h3>Web Development</h3>
-                <ul>
-                    <li>FastAPI, Flask, Django</li>
-                </ul>
-            </div>
-            <div class="skill">
-                <h3>Cloud & Databases</h3>
-                <ul>
-                    <li>AWS S3, AWS Glue, AWS Athena</li>
-                    <li>SQL, PostgreSQL, Oracle 12c</li>
-                </ul>
-            </div>
-            <div class="skill">
-                <h3>Tools & Technologies</h3>
-                <ul>
-                    <li>Kafka, Airflow, Selenium, BeautifulSoup</li>
-                    <li>Linux (Ubuntu, RedHat), Docker</li>
-                </ul>
+            <div class="skills">
+                <div class="skill">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                <div class="skill">
+                    <h3>Data Science & ML Libraries</h3>
+                    <ul>
+                        <li>NumPy, Pandas, Matplotlib, Seaborn, scikit-learn, Tensorflow, PyTorch</li>
+                    </ul>
+                </div>
+                <div class="skill">
+                    <h3>Web Development</h3>
+                    <ul>
+                        <li>FastAPI, Flask, Django</li>
+                    </ul>
+                </div>
+                <div class="skill">
+                    <h3>Cloud & Databases</h3>
+                    <ul>
+                        <li>AWS S3, AWS Glue, AWS Athena</li>
+                        <li>SQL, PostgreSQL, Oracle 12c</li>
+                    </ul>
+                </div>
+                <div class="skill">
+                    <h3>Tools & Technologies</h3>
+                    <ul>
+                        <li>Kafka, Airflow, Selenium, BeautifulSoup</li>
+                        <li>Linux (Ubuntu, RedHat), Docker</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <!-- Education Section -->
-        <section class="education">
+        <section>
             <h2 class="section-heading">Education</h2>
             <ul>
-                <li><strong>Post Graduate Certification in Data Science</strong> - IIIT, Bangalore (GTU), CGPA: 3.8/4, 2020</li>
-                <li><strong>Bachelor's in Computer Science and Engineering</strong> - HJD Institute of Technical Education and Research, Kera (GTU), CGPA: 7.63/10, 2016</li>
-                <li><strong>Diploma in Computer Engineering</strong> - Government Polytechnic, Bhuj (GTU), CGPA: 6.98/10, 2013</li>
-                <li><strong>SSC</strong> - The White Eagle School, Devpar (CBSE), 68.80%, 2009</li>
+                <li><strong>Post Graduate Certification in Data Science</strong> - IIIT, Bangalore (GTU), 2020</li>
+                <li><strong>Bachelor's in Computer Science and Engineering</strong> - HJD Institute of Technical Education and Research, Kera (GTU), 2016</li>
+                <li><strong>Diploma in Computer Engineering</strong> - Government Polytechnic, Bhuj (GTU), 2013</li>
+                <li><strong>SSC</strong> - The White Eagle School, Devpar (CBSE), 2009</li>
             </ul>
         </section>
 
         <!-- Projects Section -->
-        <section class="projects">
+        <section>
             <h2 class="section-heading">Key Projects</h2>
-            <div class="project">
-                <h3>Scraper — Ocius Technologies</h3>
-                <p>Developed a data scraping application to convert data into CSV format, supporting JSON, PDF, XML, and HTML data formats.</p>
-                <p><strong>Technologies</strong>: Python, BeautifulSoup, Selenium, Airflow, Linux (Ubuntu)</p>
+            <div class="projects">
+                <div class="project">
+                    <h3>Scraper &mdash; Ocius Technologies</h3>
+                    <p>Developed a data scraping application to convert data into CSV format, supporting JSON, PDF, XML, and HTML data formats.</p>
+                    <p><strong>Technologies:</strong> Python, BeautifulSoup, Selenium, Airflow, Linux (Ubuntu)</p>
+                </div>
+                <div class="project">
+                    <h3>Recon &mdash; Ocius Technologies</h3>
+                    <p>Built a reconciliation tool for handling various database configurations, enabling seamless operations and data integration.</p>
+                    <p><strong>Technologies:</strong> Python, AWS Athena, FastAPI, Airflow, Linux (Ubuntu)</p>
+                </div>
+                <div class="project">
+                    <h3>Dag Handler &mdash; Ocius Technologies</h3>
+                    <p>A tool that triggers DAGs based on events like file uploads, Kafka messages, and more, replacing time-based scheduling in Airflow.</p>
+                    <p><strong>Technologies:</strong> Python, Kafka, FastAPI, Airflow, Linux (Ubuntu)</p>
+                </div>
+                <div class="project">
+                    <h3>Monitoring Software for Satellite Data Processing Chain &mdash; ISRO</h3>
+                    <p>Developed a tool to monitor the daily automation system of satellite data processing, manage failures, and upgrade legacy systems. Integrated a product inventory system for locating satellite products and exporting their metadata. The system utilizes metadata to track and visualize data locations on a world map, enhancing operational efficiency.</p>
+                    <p><strong>Technologies:</strong> NetBeans, Java (Swing), Linux (RedHat)</p>
+                </div>
             </div>
-            <div class="project">
-                <h3>Recon — Ocius Technologies</h3>
-                <p>Built a reconciliation tool for handling various database configurations, enabling seamless operations and data integration.</p>
-                <p><strong>Technologies</strong>: Python, AWS Athena, FastAPI, Airflow, Linux (Ubuntu)</p>
-            </div>
-            <div class="project">
-                <h3>Dag Handler — Ocius Technologies</h3>
-                <p>A tool that triggers DAGs based on events like file uploads, Kafka messages, and more, replacing time-based scheduling in Airflow.</p>
-                <p><strong>Technologies</strong>: Python, Kafka, FastAPI, Airflow, Linux (Ubuntu)</p>
-            </div>
-            <div class="project">
-    <h3>Monitoring Software for Satellite Data Processing Chain — ISRO</h3>
-    <p>Developed a tool to monitor the daily automation system of satellite data processing, manage failures, and upgrade legacy systems. Integrated a product inventory system for locating satellite products and exporting their metadata. The system utilizes metadata to track and visualize data locations on a world map, enhancing operational efficiency.</p>
-    <p><strong>Technologies</strong>: NetBeans, Java (Swing), Linux (RedHat)</p>
-</div>
         </section>
 
         <!-- Contact Section -->
-        <section class="contact">
+        <section>
             <h2 class="section-heading">Contact Me</h2>
             <p>Feel free to reach out via email or connect with me on LinkedIn!</p>
             <p>Email: <a href="mailto:raju.bhimani07@live.com">raju.bhimani07@live.com</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/raju-bhimani-2b0973b4" target="_blank">Raju Bhimani</a></p>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/raju-bhimani-2b0973b4" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <!-- Add other social icons if needed -->
             </div>
         </section>
     </div>
